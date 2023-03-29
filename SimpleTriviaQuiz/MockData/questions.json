@@ -1,0 +1,123 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "All of the following are names of the Seven Warring States EXCEPT:",
+      "correct_answer": "Zhai (翟)",
+      "incorrect_answers": [
+        "Zhao (趙)",
+        "Qin (秦)",
+        "Qi (齊)"
+      ]
+    },
+    {
+      "category": "Entertainment: Books",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What&amp;#039;s Harry Potter&amp;#039;s dad&amp;#039;s name?",
+      "correct_answer": "James Potter",
+      "incorrect_answers": [
+        "Joey Potter",
+        "Frank Potter",
+        "Hairy Potter Sr."
+      ]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What was the first .hack game?",
+      "correct_answer": ".hack//Infection",
+      "incorrect_answers": [
+        ".hack//Zero",
+        ".hack//Sign",
+        ".hack//Liminality"
+      ]
+    },
+    {
+      "category": "Entertainment: Television",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Which of these Disney shows is classified as an anime?",
+      "correct_answer": "Stitch!",
+      "incorrect_answers": [
+        "Cory in the House",
+        "The Emperor&amp;#039;s New School",
+        "Hannah Montana"
+      ]
+    },
+    {
+      "category": "Entertainment: Japanese Anime &amp; Manga",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "In &amp;quot;To Love-Ru&amp;quot;, Ren and Run are from what planet?",
+      "correct_answer": "Memorze",
+      "incorrect_answers": [
+        "Deviluke",
+        "Mistletoe",
+        "Okiwana"
+      ]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which of the following Call of Duty games was a PS3 launch title?",
+      "correct_answer": "Call of Duty 3",
+      "incorrect_answers": [
+        "Call of Duty 4: Modern Warfare",
+        "Call of Duty: World at War",
+        "Call of Duty: Roads to Victory"
+      ]
+    },
+    {
+      "category": "Entertainment: Japanese Anime &amp; Manga",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "Which animation studio animated &amp;quot;To Love-Ru&amp;quot;?",
+      "correct_answer": "Xebec",
+      "incorrect_answers": [
+        "Trigger",
+        "Sunrise",
+        "Kyoto Animation"
+      ]
+    },
+    {
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What year did Skoal, a smokeless Tobacco company, release their first line of Pouches, known as &amp;quot;Skoal Bandits&amp;quot;?",
+      "correct_answer": "1983",
+      "incorrect_answers": [
+        "1934",
+        "1984",
+        "1822"
+      ]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Who created Agent 47 in the game series &amp;quot;Hitman&amp;quot;?",
+      "correct_answer": "Dr. Otto Wolfgang Ort-Meyer",
+      "incorrect_answers": [
+        "Professor Hertz Amadeus Schneider",
+        "Dr. Josef Mengele",
+        "Professor Otto Rothwinkler"
+      ]
+    },
+    {
+      "category": "Science: Mathematics",
+      "type": "boolean",
+      "difficulty": "easy",
+      "question": "An equilateral triangle always has every angle measuring 60&amp;deg;.",
+      "correct_answer": "True",
+      "incorrect_answers": [
+        "False"
+      ]
+    }
+  ]
+}
