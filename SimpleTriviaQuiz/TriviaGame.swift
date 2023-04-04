@@ -37,16 +37,24 @@ struct Trivia: Decodable {
 struct APIResponse: Decodable {
     var response_code: Int
     var results: [Trivia]?
+    
+    mutating func removePercentEncoding() {
+        if results == nil { return }
+        for i in 0..<results!.count {
+            results![i].removePercentEncoding()
+        }
+    }
 }
 
 func fetchTriviaData() async -> [Trivia] {
-    let triviaURL = URL(string: "https://opentdb.com/api.php?amount=5&category=9&encode=url3986")!
-    var httpRequest = URLRequest(url: triviaURL)
+    let triviaURL = "https://opentdb.com/api.php?amount=5&category=9&encode=url3986"
+    var httpRequest = URLRequest(url: URL(string: triviaURL)!)
     httpRequest.httpMethod = "GET"
     do {
-        let (responseData, _) = try await URLSession.shared.data(for: httpRequest)
-        var decodedData = try JSONDecoder().decode(APIResponse.self, from: responseData)
-        return decodedData.results ?? []
+        let (responseData, _) = try await URLSession.shared.data(for: httpRequest) // Make the HTTP request
+        var decodedData = try JSONDecoder().decode(APIResponse.self, from: responseData) // Decode the request
+        decodedData.removePercentEncoding()
+        return decodedData.results ?? [] // Return the results or an empty string
     } catch let error {
         print(error.localizedDescription)
         return []
@@ -59,16 +67,16 @@ struct TriviaGame: View {
     @State var correctCount: Int = 0
     @State var currentQuestion: Int = 0
     @State var shuffledAnswers: [String] = []
-    @State var answerChosen: String = ""
+    
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
         VStack {
-            if triviaData.count == 0 {
+            if triviaData.count == 0 { // TriviaData array is empty, data is still being fetched
                 Text("Loading...")
             } else if currentQuestion >= triviaData.count { // We have reach the maximum
                 ScoreView()
-            } else {
+            } else { // Game is active
                 TriviaView()
             }
         } // VStack
@@ -76,9 +84,6 @@ struct TriviaGame: View {
         .onAppear {
             Task {
                 triviaData = await fetchTriviaData()
-                for i in 0..<triviaData.count {
-                    triviaData[i].removePercentEncoding()
-                }
                 shuffleAnswers()
             }
         } // .onAppear
@@ -115,11 +120,9 @@ struct TriviaGame: View {
                         .font(.system(size: 22, weight: .semibold))
                         .foregroundColor(Color.black)
                         .frame(maxWidth: .infinity, maxHeight: 65)
-                        .background(isComplete && answer == triviaData[currentQuestion].correct_answer
-                                    ? Color.green
-                                    : isComplete && answer != triviaData[currentQuestion].correct_answer && answerChosen == answer
-                                    ? Color.red.opacity(0.8)
-                                    : Color.white)
+                        .background(isComplete
+                                    && triviaData[currentQuestion].correct_answer == answer
+                                    ? Color.green : Color.white)
                         .cornerRadius(12)
                         .overlay(alignment: .center) {
                             RoundedRectangle(cornerRadius: 12)
@@ -146,8 +149,7 @@ struct TriviaGame: View {
     func answerClicked(buttonText: String) {
         if isComplete { return } // Do not allow re-answering
         isComplete = true
-        answerChosen = buttonText
-        if triviaData[currentQuestion].correct_answer == answerChosen {
+        if buttonText == triviaData[currentQuestion].correct_answer {
             correctCount += 1
         }
     }
@@ -156,7 +158,6 @@ struct TriviaGame: View {
         isComplete = false
         currentQuestion = 0
         correctCount = 0
-        answerChosen = ""
     }
     
     func shuffleAnswers() {
