@@ -13,6 +13,8 @@
 		BDC3904D29CE16A0009FFF7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDC3904C29CE16A0009FFF7D /* Assets.xcassets */; };
 		BDC3905029CE16A0009FFF7D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDC3904F29CE16A0009FFF7D /* Preview Assets.xcassets */; };
 		BDC3905B29CE2450009FFF7D /* questions.json in Resources */ = {isa = PBXBuildFile; fileRef = BDC3905A29CE2450009FFF7D /* questions.json */; };
+		BDFC7BAB29DD266200EC262B /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC7BAA29DD266200EC262B /* Services.swift */; };
+		BDFC7BAD29DD2C9E00EC262B /* SampleTrivias.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFC7BAC29DD2C9E00EC262B /* SampleTrivias.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		BDC3904C29CE16A0009FFF7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDC3904F29CE16A0009FFF7D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BDC3905A29CE2450009FFF7D /* questions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = questions.json; sourceTree = "<group>"; };
+		BDFC7BAA29DD266200EC262B /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		BDFC7BAC29DD2C9E00EC262B /* SampleTrivias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTrivias.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 				BDC3904C29CE16A0009FFF7D /* Assets.xcassets */,
 				BDC3904E29CE16A0009FFF7D /* Preview Content */,
 				BDAF08C429D3D1A3009B267B /* TriviaGame.swift */,
+				BDFC7BAA29DD266200EC262B /* Services.swift */,
 			);
 			path = SimpleTriviaQuiz;
 			sourceTree = "<group>";
@@ -77,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				BDC3905A29CE2450009FFF7D /* questions.json */,
+				BDFC7BAC29DD2C9E00EC262B /* SampleTrivias.swift */,
 			);
 			path = MockData;
 			sourceTree = "<group>";
@@ -155,6 +161,8 @@
 				BDC3904B29CE169F009FFF7D /* ContentView.swift in Sources */,
 				BDC3904929CE169F009FFF7D /* SimpleTriviaQuizApp.swift in Sources */,
 				BDAF08C529D3D1A4009B267B /* TriviaGame.swift in Sources */,
+				BDFC7BAB29DD266200EC262B /* Services.swift in Sources */,
+				BDFC7BAD29DD2C9E00EC262B /* SampleTrivias.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,12 +299,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Neal-Archival.SimpleTriviaQuiz";
+				PRODUCT_BUNDLE_IDENTIFIER = SimpleTriviaQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -320,12 +329,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Neal-Archival.SimpleTriviaQuiz";
+				PRODUCT_BUNDLE_IDENTIFIER = SimpleTriviaQuiz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
