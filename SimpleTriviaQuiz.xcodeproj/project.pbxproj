@@ -50,6 +50,14 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		BDB2DA2B29E5F7D9001D5CB5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				BDFC7BAA29DD266200EC262B /* Services.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		BDC3903C29CE169F009FFF7D = {
 			isa = PBXGroup;
 			children = (
@@ -76,7 +84,7 @@
 				BDC3904C29CE16A0009FFF7D /* Assets.xcassets */,
 				BDC3904E29CE16A0009FFF7D /* Preview Content */,
 				BDAF08C429D3D1A3009B267B /* TriviaGame.swift */,
-				BDFC7BAA29DD266200EC262B /* Services.swift */,
+				BDB2DA2B29E5F7D9001D5CB5 /* Network */,
 			);
 			path = SimpleTriviaQuiz;
 			sourceTree = "<group>";
